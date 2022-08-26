@@ -1,8 +1,12 @@
 import { wrapper } from "../redux/store";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <div>
+      <Component {...pageProps} />
+    </div>
+  );
 }
 
 export default wrapper.withRedux(MyApp);

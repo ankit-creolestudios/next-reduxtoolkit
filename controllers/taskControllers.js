@@ -3,6 +3,7 @@ import Task from "../models/task";
 // Create Task
 export const createTask = async (req, res) => {
   try {
+    console.log(req.body);
     const task = await Task.create(req.body);
 
     res.status(201).json({
