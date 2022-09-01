@@ -10,13 +10,12 @@ import { wrapper } from "../redux/store";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const state = useSelector((state) => state);
+  console.log(state);
   return (
     <div className={styles.container}>
-      Next js
-      <div>
-        <Task />
-        {/* <Page /> */}
-      </div>
+      <Task />
+      {/* <Page /> */}
     </div>
   );
 }

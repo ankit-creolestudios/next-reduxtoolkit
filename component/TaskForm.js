@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { createTask } from "../redux/feature/taskSlice";
 import TaskList from "./TaskList";
@@ -13,6 +13,9 @@ const TaskForm = () => {
     };
     if (formData.title !== "") {
       dispatch(createTask(formData));
+    }
+    if (window !== undefined) {
+      window.location.reload();
     }
   };
   return (

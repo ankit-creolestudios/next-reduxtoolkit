@@ -3,13 +3,7 @@ import TaskForm from "./TaskForm";
 import TaskList from "./TaskList";
 
 const Task = () => {
-  return (
-    <div>
-      <div>
-        <TaskForm />
-      </div>
-    </div>
-  );
+  return <TaskForm />;
 };
 
 export default Task;
