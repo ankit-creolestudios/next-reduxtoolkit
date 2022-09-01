@@ -22,8 +22,8 @@ export default function Home() {
 }
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async (req, res) => {
-    await store.dispatch(increment());
-    await store.dispatch(decrement());
+    // await store.dispatch(increment());
+    // await store.dispatch(decrement());
     await store.dispatch(readTask({ req, res }));
     return {
       props: {},
